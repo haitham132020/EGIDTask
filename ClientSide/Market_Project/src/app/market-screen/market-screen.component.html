@@ -1,0 +1,16 @@
+<h2>Market Screen</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let stock of stocks">
+      <td>{{ stock.name }}</td>
+      <td>{{ stock.price }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,46 @@
+<h2>Order Screen</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Person Name</th>
+      <th>Stock Name</th>
+      <th>Price</th>
+      <th>Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders">
+      <td>{{ order.personName }}</td>
+      <td>{{ order.stockName }}</td>
+      <td>{{ order.price }}</td>
+      <td>{{ order.quantity }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Create Order</h3>
+
+<form (ngSubmit)="createOrder()">
+  <label>
+    Person Name:
+    <input type="text" [(ngModel)]="newOrder.personName" name="personName" required>
+  </label>
+  <br>
+  <label>
+    Stock Name:
+    <input type="text" [(ngModel)]="newOrder.stockName" name="stockName" required>
+  </label>
+  <br>
+  <label>
+    Price:
+    <input type="number" [(ngModel)]="newOrder.price" name="price" required>
+  </label>
+  <br>
+  <label>
+    Quantity:
+    <input type="number" [(ngModel)]="newOrder.quantity" name="quantity" required>
+  </label>
+  <br>
+  <button type="submit">Create</button>
+</form>
